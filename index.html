@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Homepage </title>
+    <link rel="stylesheet" href="{{ url_for ('static',filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Style sheet to add icons --->
+    <script src="https://kit.fontawesome.com/1035870736.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Nav Section -->
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                <a href="index"><img src="{{ url_for ('static',filename='logo.png') }}" altwidth="125px" height="75px"></a>
+                    <h1>P<span>-</span><span>Rex</span></h1>
+                </div>
+
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index">Home</a></li>
+                        <li><a href="products">Products</a></li>
+                        <li><a href="aboutus">About</a></li>
+                        <li><a href="predict">Predict</a></li>
+                        <li><a href="login">Logout</a></li>
+                        
+                    </ul>
+                </nav>
+                <img src="{{ url_for ('static',filename='cart.png') }}" width="30p" height="30p">
+                <img src="{{ url_for ('static',filename='menu.png') }}" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>A New Gen For Farming <br> Time for Change</h1>
+                    <p> Traditional crop disease detection Tiring, Nescience.<br> New Method get Your crop diagonised in few secs.<br>Welcome to P-Rex!</p>
+                    <a href="" class="btn"> Check It Out &#8594</a>
+
+                </div>
+                <div class="col-2">
+                    <img src="{{ url_for ('static',filename='image1.jpg') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Top Products --->
+    <div class="categories">
+        <!--- I can detect --->
+        <div class="small-container">
+            <h1 class="title1">P-Rex Can Detect</h1>
+
+            <div class="row">
+
+                <div class="col-3">
+                    <div class="hl">
+                        <img src="{{ url_for ('static',filename='hleaf.jpeg') }}" class='img1'>
+                        <h3> Healthy Leaf</h3>
+                        <div class="overlay1">
+                            <div class="text">A healthy Leaf is free from any kind of spots or strips. </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-3">
+                    <div class="hl">
+                        <img src="{{ url_for ('static',filename='anthleaf.jpeg') }}" class='img1'>
+                        <h3> Anthracnose</h3>
+                        <div class="overlay1">
+                            <div class="text">Anthracnose is a fungual disease where you see Brown spots and strips. </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="hl">
+                        <img src="{{ url_for ('static',filename='blightleaf.jpeg') }}" class='img1'>
+                        <h3> Leaf Blight</h3>
+                        <div class="overlay1">
+                            <div class="text">Leaf blight is very common disease where you see Brown stips on the leaf </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--- featured Products--->
+        <div class="small-container">
+            <h2 class="title2"> Featured Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='prod1.jpg') }}">
+                    <h4>Natural Creation</h4>
+                    <h5>Corn Meal</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Rs: 100</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='lblight2.jpg') }}">
+                    <h4>ADAMA</h4>
+                    <h5>Captan Gold</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Rs: 399</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='prod2.jpg') }}">
+                    <h4>Good Natured</h4>
+                    <h5>Corn Meal</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p> Rs: 120</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='lblight9.jpg') }}">
+                    <h4>BONIDE</h4>
+                    <h5>Mancozeb</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>Rs: 250</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest Products -->
+        <div class="small-container">
+            <h2 class="title2"> Latest Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='anth5.jpg') }}">
+                    <h4>Quilt</h4>
+                    <h5>Xcell</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Rs: 199</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='lblight6.jpg') }}">
+                    <h4>AgroBio</h4>
+                    <h5>Thiram</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Rs: 299</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='rust10.jpg') }}">
+                    <h4>Vitavax</h4>
+                    <h5>2000 F5</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p> Rs: 220</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='anth11.jpg') }}">
+                    <h4>Yates</h4>
+                    <h5>Mancozeb Plus</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>Rs: 150</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='anth2.jpg') }}">
+                    <h4>Headline</h4>
+                    <h5> BASF</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Rs: 299</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='rust3.jpg') }}">
+                    <h4>Manzate</h4>
+                    <h5>Pro-Stick</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Rs: 299</p>
+                </div>
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='rust5.jpg') }}">
+                    <h4>Agricola</h4>
+                    <h5>PlantVax</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p> Rs: 200</p>
+                </div>
+
+                <div class="col-4">
+                    <img src="{{ url_for ('static',filename='anth4.jpg') }}">
+                    <h4>Manzate</h4>
+                    <h5>Max T & O</h5>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>Rs: 150</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--- Message--->
+    <div class="message">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                   <img src="{{ url_for ('static',filename='jowar2.jpg') }}" class='img2'> 
+                </div>
+                <div class="col-2">
+                    <p>Know About Jowar</p>
+                    <h1>Jowar Plant</h1>
+                    <small>
+                        Jowar is loaded with protein, carbohydrate and dietary fibre which promotes growth and development, it is an ideal cereal in weight watcher’s diet and also regulates diabetes.<br>Imbued with immense amounts of calcium, iron, phosphorus, potassium and sodium, these minerals fortifies the bones, strengthen the immunity and keeps diseases at bay.
+                        <br> It is import to grow Jowar profitably. So check out few products to increase your crop yeild.
+                    </small>
+                    <a href="" class="btn">Buy Now &#8594</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--- Message from Developers --->
+    <div class = "dev-msg">
+        <div class="small-container">
+           <h2 class="title2">Message From Developers</h2>
+            <div class="row">
+                <div class="col-4">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Farmers need not burden themselves in finding the cure to plant diseases. A new smart way is availabel for that. </p>
+                    <img src = "{{ url_for ('static',filename='dev1.jpg') }}">
+                    <h3>Adi Manivarsh</h3>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-quote-left"></i>
+                    <p>AI can revolutinize any feild and one of those is the Agriculture sector. Modren ways would moderize the users as well. </p>
+                    <img src = "{{ url_for ('static',filename='dev2.jpg') }}">
+                    <h3>Harinath Reddy A</h3>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Do not hesitate to be different when you belive it's gonna work. Be the first to adapt change and be the future. </p>
+                    <img src = "{{ url_for ('static',filename='dev3.jpg') }}">
+                    <h3>Yeshwanth</h3>
+                </div>
+                <div class="col-4">
+                    <i class="fa fa-quote-left"></i>
+                    <p>No more holdbacks do your farmming innovatively. Start investing when there's nothing to loose.  </p>
+                    <img src = "{{ url_for ('static',filename='dev4.jpg') }}">
+                    <h3>Venkat Reddy</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+   <!----Brands------> 
+    <div class="brands">
+        <div class = "small-container">
+           <h1 class="title3">Top Brands</h1>
+            <div class="row">
+                <div class='col-6'>
+                    <img src = "{{ url_for ('static',filename='brand1.jpg') }}">
+                </div>
+                <div class='col-6'>
+                    <img src = "{{ url_for ('static',filename='brand2.jpg') }}">
+                </div>
+                <div class='col-6'>
+                    <img src = "{{ url_for ('static',filename='brand3.jpg') }}">
+                </div>
+                <div class='col-6'>
+                    <img src = "{{ url_for ('static',filename='brand4.jpg') }}">
+                </div>
+                <div class='col-6'>
+                    <img src = "{{ url_for ('static',filename='brand5.jpg') }}">
+                </div>
+                <div class='col-6'>
+                    <img src = "{{ url_for ('static',filename='brand6.jpg') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!----footer---->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App on Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src = "{{ url_for ('static',filename='app-store.png') }}">
+                        <img src = "{{ url_for ('static',filename='play-store.png') }}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - P-REX@ Hary's Solutions</p>
+        </div>
+    </div>
+
+<!--- JS for toggle Menu---->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px"
+                }
+        }
+    </script>
+
+   
+</body>
+</html>

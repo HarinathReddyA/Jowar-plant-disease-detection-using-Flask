@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-Rex | Account </title>
+    <link rel="stylesheet" href="{{ url_for ('static',filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Style sheet to add icons --->
+    <script src="https://kit.fontawesome.com/1035870736.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Nav Section -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index"><img src="{{ url_for ('static',filename='logo.png') }}" width="125px" height="75px"></>
+            </div>
+
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index">Home</a></li>
+                    <li><a href="products">Products</a></li>
+                    <li><a href="aboutus">About</a></li>
+                    <li><a href="predict">Predict</a></li>
+                    <li><a href="login">Logout</a></li>
+                </ul>
+            </nav>
+            <img src="{{ url_for ('static',filename='cart.png') }}" width="30p" height="30p">
+            <img src="{{ url_for ('static',filename='menu.png') }}" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    <!------------------Sample Preedict------------>
+    <div class="predict-box">
+        <div class="row">
+            <div class="col-2">
+                <h1>Upload Image</h1>
+                <form method="post" enctype="multipart/form-data">
+                    <br>
+                    <input type="file" name="image">
+                    <input type="submit" class='predict' value="predict">
+                    
+                </form>
+            </div>
+
+            <div class="col-2">
+                {% if image %}
+                
+                    <img src="static/{{ image }}"  align='center'>
+                    <h3>Prediction:{{ prediction}}</h3>
+                {% endif %}
+            </div>
+        </div>
+        
+
+    </div>
+    
+   <style>
+       .predict-box{
+            max-width: 1080px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 50px;
+            
+       }
+
+       .predict-box .row{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+       }
+
+       .predict .row .col-2{
+           flex-basis: 50%;
+            min-width: 300px;
+            width: 300px;
+            height: 450px;
+       }
+
+       .predict .row .col-2 img{
+           padding: 20px 0;
+            flex: 1;
+            width: 300px;
+            height: 450px;
+            object-fit: cover;
+       }
+
+       .predict-box h1{
+           border-radius: 15px;
+            border-color: rgb(131, 238, 131);
+            border-style: solid;
+       }
+
+       .predict{
+            background-color: #f44336;
+            border: none;
+            border-radius:10px;
+            color: white;
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width:100px;
+            height:50px;
+
+       }
+       .predict :hover{
+            color: #fff;
+            background: green;
+        }
+   </style>
+
+    <!----footer---->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App on Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="{{ url_for ('static',filename='app-store.png') }}">
+                        <img src="{{ url_for ('static',filename='play-store.png') }}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - P-REX@ Hary's Solutions</p>
+        </div>
+    </div>
+    
+    
+    <!--- JS for toggle Menu---->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
